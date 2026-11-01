@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102b25">
+<title>D.K. Home Solutions (Regd.) | Trusted People, Better Care, Happy Homes</title>
+<meta name="description" content="D.K. Home Solutions provides maid, baby care, newborn and mother care, patient care, nurse, cook, driver, housekeeping and hotel staff services in Delhi.">
+<style>
+:root{--green:#123c31;--green2:#1c5b49;--lime:#d8f27a;--cream:#f8f7f0;--ink:#172a24;--muted:#66736d;--white:#fff;--line:#e4e9e2;--shadow:0 18px 55px rgba(19,54,43,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button,a{ -webkit-tap-highlight-color:transparent}
+.container{width:min(1160px,92%);margin:auto}
+.topbar{background:var(--green);color:#eaf3e9;font-size:12px;padding:8px 0}
+.topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.93);backdrop-filter:blur(14px);border-bottom:1px solid rgba(20,60,48,.08)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:11px;min-width:220px}
+.brand-mark{width:46px;height:46px;border-radius:15px;background:var(--green);color:var(--lime);display:grid;place-items:center;font-weight:900;font-size:17px;box-shadow:0 7px 20px #123c3124}
+.brand-name{font-size:14px;font-weight:900;letter-spacing:.4px;line-height:1.25}
+.brand-name small{display:block;font-size:10px;color:var(--muted);font-weight:700;letter-spacing:1.2px;margin-top:4px}
+.nav-links{display:flex;align-items:center;gap:26px;font-size:13px;font-weight:700;color:#41524a}
+.nav-links a:hover{color:var(--green2)}
+.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:13px 20px;font-weight:800;font-size:13px;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s}
+.nav-cta,.btn-primary{background:var(--green);color:white;box-shadow:0 8px 20px #123c3120}
+.nav-cta:hover,.btn:hover{transform:translateY(-3px);box-shadow:0 13px 26px #123c3128}
+.menu-btn{display:none;background:#eff4ec;border:0;border-radius:12px;padding:10px;font-size:22px}
+.hero{position:relative;overflow:hidden;background:var(--cream);padding:70px 0 78px;isolation:isolate}
+.hero:before{content:"";position:absolute;width:620px;height:620px;border-radius:50%;background:#e5f0d9;right:-160px;top:-210px;z-index:-2;animation:float 8s ease-in-out infinite}
+.hero:after{content:"";position:absolute;width:260px;height:260px;border:1px solid #c8d8c8;border-radius:50%;right:9%;bottom:-160px;z-index:-1}
+.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:56px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#e8f1df;border:1px solid #d9e7cc;color:var(--green);border-radius:99px;padding:7px 12px;font-size:11px;font-weight:900;letter-spacing:1.1px;text-transform:uppercase}
+.pulse{width:8px;height:8px;border-radius:50%;background:#5d9b54;box-shadow:0 0 0 5px #5d9b5420;animation:pulse 1.8s infinite}
+h1{font-size:clamp(42px,5.4vw,69px);line-height:1.04;letter-spacing:-3px;margin:22px 0 20px;font-weight:900;max-width:650px}
+h1 span{color:var(--green2);position:relative;white-space:nowrap}
+.hero-copy{font-size:16px;color:#5e6c64;max-width:540px;margin-bottom:28px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn-secondary{background:white;color:var(--green);border:1px solid #dce5da}
+.hero-trust{display:flex;gap:20px;flex-wrap:wrap;margin-top:30px;color:#5c6b63;font-size:12px;font-weight:700}
+.hero-trust span{display:flex;align-items:center;gap:7px}
+.check{width:18px;height:18px;border-radius:50%;display:grid;place-items:center;background:#dceccf;color:var(--green);font-size:11px}
+.hero-visual{position:relative;min-height:470px}
+.hero-photo{position:absolute;inset:15px 25px 15px 20px;border-radius:35px;overflow:hidden;background:#d9e6d5;box-shadow:var(--shadow);transform:rotate(1.5deg);animation:appear .8s ease both}
+.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-overlay{position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(9,34,26,.78))}
+.photo-caption{position:absolute;bottom:26px;left:28px;color:white;right:24px}
+.photo-caption strong{display:block;font-size:23px;line-height:1.2}
+.photo-caption span{font-size:12px;color:#e0ece2}
+.float-card{position:absolute;z-index:2;background:#fff;border:1px solid #edf0e9;border-radius:18px;padding:14px 17px;box-shadow:0 15px 40px #173c2b20;animation:float 5s ease-in-out infinite}
+.float-card.one{top:5px;right:-4px}
+.float-card.two{bottom:35px;left:-6px;animation-delay:-2s}
+.float-icon{width:35px;height:35px;border-radius:12px;display:inline-grid;place-items:center;background:#edf5e4;font-size:18px;margin-right:9px;vertical-align:middle}
+.float-card strong{font-size:12px;display:inline-block;vertical-align:middle}
+.float-card small{display:block;color:var(--muted);font-size:10px;margin-left:45px;margin-top:-5px}
+.section{padding:86px 0}
+.section-head{text-align:center;max-width:700px;margin:0 auto 42px}
+.kicker{font-size:11px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;color:var(--green2)}
+.section h2{font-size:clamp(30px,4vw,44px);line-height:1.12;letter-spacing:-1.5px;margin:10px 0 14px;font-weight:900}
+.section-head p{color:var(--muted);font-size:15px}
+.services{background:#fff}
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.service-card{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff;transition:transform .28s,box-shadow .28s,border-color .28s}
+.service-card:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:#c8d9c4}
+.service-image{height:185px;overflow:hidden;background:#edf2e9;position:relative}
+.service-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.service-card:hover .service-image img{transform:scale(1.07)}
+.service-tag{position:absolute;top:12px;left:12px;background:#ffffffeb;color:var(--green);border-radius:99px;padding:5px 9px;font-size:10px;font-weight:900}
+.service-body{padding:19px}
+.service-body h3{font-size:17px;line-height:1.25;margin-bottom:8px}
+.service-body p{font-size:12px;color:var(--muted);min-height:58px}
+.service-link{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-size:12px;color:var(--green2);font-weight:900}
+.why{background:#f4f6ef}
+.why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;align-items:center}
+.why-image{height:480px;border-radius:30px;overflow:hidden;position:relative;box-shadow:var(--shadow)}
+.why-image img{width:100%;height:100%;object-fit:cover}
+.why-badge{position:absolute;bottom:20px;left:20px;right:20px;padding:18px 20px;border-radius:18px;background:#fffef0ed;backdrop-filter:blur(8px)}
+.why-badge strong{font-size:18px;display:block}
+.why-badge span{font-size:12px;color:var(--muted)}
+.why-content h2{font-size:clamp(32px,4vw,46px);line-height:1.1;letter-spacing:-1.5px;margin:12px 0 16px}
+.why-content>p{color:var(--muted);font-size:14px;margin-bottom:24px}
+.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.feature{display:flex;gap:12px;align-items:flex-start}
+.feature-icon{width:39px;height:39px;flex-shrink:0;border-radius:13px;background:#e0edcf;display:grid;place-items:center;font-size:18px}
+.feature h3{font-size:13px;margin:1px 0 4px}
+.feature p{font-size:11px;color:var(--muted);line-height:1.5}
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.process-card{padding:26px;border:1px solid var(--line);border-radius:22px;background:#fff}
+.process-number{width:44px;height:44px;border-radius:14px;background:var(--green);color:var(--lime);display:grid;place-items:center;font-weight:900;margin-bottom:18px}
+.process-card h3{font-size:17px;margin-bottom:8px}
+.process-card p{font-size:13px;color:var(--muted)}
+.cta{padding:0 0 86px}
+.cta-panel{background:var(--green);color:#fff;border-radius:30px;padding:48px 52px;display:flex;align-items:center;justify-content:space-between;gap:30px;position:relative;overflow:hidden}
+.cta-panel:after{content:"";position:absolute;width:280px;height:280px;border:1px solid #ffffff20;border-radius:50%;right:25%;top:-180px;box-shadow:0 0 0 35px #ffffff08,0 0 0 70px #ffffff05}
+.cta-panel h2{font-size:clamp(28px,3.7vw,42px);line-height:1.1;letter-spacing:-1px;max-width:600px}
+.cta-panel p{font-size:13px;color:#d1e1d5;margin-top:10px}
+.cta-panel .btn{background:var(--lime);color:var(--green);white-space:nowrap;z-index:1}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}
+.contact-info h2{font-size:40px;line-height:1.1;letter-spacing:-1.5px;margin:12px 0}
+.contact-info>p{color:var(--muted);font-size:14px;margin-bottom:25px}
+.contact-item{display:flex;gap:13px;margin:18px 0;align-items:flex-start}
+.contact-item .feature-icon{background:#eff4e9}
+.contact-item strong{display:block;font-size:13px}
+.contact-item span,.contact-item a{font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.contact-form{background:#f7f8f3;border:1px solid #e9ede4;border-radius:25px;padding:30px}
+.contact-form h3{font-size:22px;margin-bottom:5px}
+.contact-form>p{font-size:12px;color:var(--muted);margin-bottom:22px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{font-size:11px;font-weight:800;color:#405248}
+.field input,.field select,.field textarea{width:100%;border:1px solid #dfe6dc;border-radius:12px;background:#fff;padding:12px 13px;font:inherit;font-size:13px;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#7ca98a;box-shadow:0 0 0 3px #7ca98a20}
+.field textarea{min-height:95px;resize:vertical}
+.contact-form .btn{width:100%;margin-top:17px}
+.form-note{font-size:10px!important;margin:12px 0 0!important;text-align:center}
+footer{background:#0d2b23;color:#e8f1e8;padding:45px 0 20px}
+.footer-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:30px;border-bottom:1px solid #ffffff20}
+.footer-brand{max-width:370px}
+.footer-brand .brand-name{font-size:15px}
+.footer-brand p{font-size:12px;color:#b5c9bb;margin-top:14px;max-width:330px}
+.footer-links h4{font-size:12px;margin-bottom:12px}
+.footer-links a{display:block;font-size:12px;color:#b5c9bb;margin:7px 0}
+.footer-links a:hover{color:var(--lime)}
+.footer-bottom{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;padding-top:18px;color:#a8bdb0;font-size:10px}
+.whatsapp{position:fixed;right:20px;bottom:20px;z-index:30;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#21c66a;color:#fff;font-size:25px;box-shadow:0 10px 30px #0002;transition:transform .2s}
+.whatsapp:hover{transform:scale(1.08)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 5px #5d9b5420}50%{box-shadow:0 0 0 9px #5d9b540c}}
+@keyframes appear{from{opacity:0;transform:translateY(15px) rotate(1.5deg)}to{opacity:1;transform:translateY(0) rotate(1.5deg)}}
+@media(max-width:980px){.nav-links{gap:14px}.hero-grid{gap:30px}.service-grid{grid-template-columns:repeat(2,1fr)}.why-grid{gap:35px}.hero-visual{min-height:410px}.hero-photo{inset:15px 12px}.float-card.one{right:-2px}.why-image{height:420px}}
+@media(max-width:740px){.topbar .container{justify-content:center;text-align:center}.nav{height:68px}.brand{min-width:0}.brand-mark{width:41px;height:41px}.menu-btn{display:block}.nav-cta{display:none}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;padding:20px 5%;border-bottom:1px solid var(--line);box-shadow:0 16px 25px #0000000a;flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{padding:12px 0;border-bottom:1px solid #eef1eb}.hero{padding:50px 0 55px}.hero-grid{grid-template-columns:1fr;gap:28px}h1{letter-spacing:-2px;font-size:clamp(41px,11vw,58px)}.hero-copy{font-size:14px}.hero-visual{min-height:370px;margin:0 3px}.hero-photo{inset:12px 18px}.float-card.two{left:-4px;bottom:12px}.section{padding:65px 0}.section-head{margin-bottom:30px}.service-grid{gap:13px}.service-image{height:145px}.service-body{padding:14px}.service-body h3{font-size:15px}.service-body p{font-size:11px;min-height:70px}.why-grid,.contact-grid{grid-template-columns:1fr;gap:32px}.why-image{height:360px}.feature-list{gap:15px}.process-grid{grid-template-columns:1fr;gap:13px}.process-card{padding:22px}.cta{padding-bottom:65px}.cta-panel{padding:32px 25px;align-items:flex-start;flex-direction:column;border-radius:23px}.contact-info h2{font-size:35px}.contact-form{padding:22px}.footer-top{gap:25px}.footer-brand{max-width:100%}}
+@media(max-width:420px){.service-grid{grid-template-columns:1fr}.service-image{height:205px}.service-body p{min-height:0}.feature-list{grid-template-columns:1fr}.hero-visual{min-height:320px}.float-card{padding:11px 12px}.float-card.one{right:-4px}.float-card.two{left:-5px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.hero-trust{gap:12px}.brand-name{font-size:12px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container"><span>✦ D.K. HOME SOLUTIONS (Regd.)</span><span>📞 <a href="tel:9315143991">93151 43991</a> &nbsp;·&nbsp; <a href="tel:8882650342">88826 50342</a></span></div></div>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="D.K. Home Solutions home"><div class="brand-mark">D.K.</div><div class="brand-name">D.K. HOME SOLUTIONS<small>TRUSTED PEOPLE · BETTER CARE</small></div></a>
+    <nav class="nav-links" id="navLinks"><a href="#home">Home</a><a href="#services">Our Services</a><a href="#about">Why Choose Us</a><a href="#process">How It Works</a><a href="#contact">Contact</a></nav>
+    <a class="nav-cta" href="#contact">Find a Caregiver <span>↗</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <div class="eyebrow"><span class="pulse"></span> Your home, cared for</div>
+      <h1>Good people.<br>Better care.<br><span>Happy homes.</span></h1>
+      <p class="hero-copy">Reliable home and personal care support for the people who matter most. From newborn care to household help, we’re here to make everyday life easier.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="#services">Explore Our Services <span>↗</span></a><a class="btn btn-secondary" href="tel:9315143991">☎ Call Us Now</a></div>
+      <div class="hero-trust"><span><i class="check">✓</i> Multiple care services</span><span><i class="check">✓</i> Personal assistance</span><span><i class="check">✓</i> Friendly support</span></div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-photo"><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85" alt="Home care professional keeping a home clean"><div class="photo-overlay"></div><div class="photo-caption"><strong>Care that feels like home.</strong><span>Support for your home, family and loved ones.</span></div></div>
+      <div class="float-card one"><span class="float-icon">🏡</span><strong>Home & Family Care</strong><small>Support for everyday living</small></div>
+      <div class="float-card two"><span class="float-icon">💚</span><strong>Here when you need us</strong><small>Let’s find the right service</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="section services" id="services">
+  <div class="container">
+    <div class="section-head reveal"><div class="kicker">What we do</div><h2>Care for every part of life</h2><p>Explore our range of home, family and staffing services. Choose what you need and contact us to discuss the details.</p></div>
+    <div class="service-grid">
+      <article class="service-card reveal"><div class="service-image"><img loading="lazy" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=80" alt="Housekeeping professional cleaning a home"><span class="service-tag">HOME SUPPORT</span></div><div class="service-body"><h3>House Maid</h3><p>Everyday household help to support a cleaner, more organised home.</p><a class="service-link" href="#contact" data-service="House Maid">Enquire about service <span>→</span></a></div></article>
+      <article class="service-card reveal"><div class="service-image"><img loading="lazy" src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=700&q=80" alt="Newborn baby resting peacefully"><span class="service-tag">LITTLE ONES</span></div><div class="service-body"><h3>Baby Care</h3><p>Helping families with day-to-day baby care and attentive assistance.</p><a class="service-link" href="#contact" data-service="Baby Care">Enquire about service <span>→</span></a></div></article>
+      <article class="service-card reveal"><div class="service-image"><img loading="lazy" src="https://images.unsplash.com/photo-1531983412531-1f49a365ffed?auto=format&fit=crop&w=700&q=80" alt="Mother holding and caring for a newborn"><span class="service-tag">NEW MOTHER SUPPORT</span></div><div class="service-body"><h3>Japa Maid & Newborn / Mother Care</h3><p>Practical household and baby-care support for the postnatal period.</p><a class="service-link" href="#contact" data-service="Japa Maid & Newborn / Mother Care">Enquire about service <span>→</span></a></div></article>
+      <article class="service-card reveal"><div class="service-image"><img loading="lazy" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=700&q=80" alt="Care professional assisting a patient"><span class="service-tag">PERSONAL CARE</span></div><div class="service-body"><h3>Patient Care</h3><p>Support with daily routines and companionship for people who need help.</p><a class="service-link" href="#contact" data-service="Patient Care">Enquire about service <span>→</span></a></div></article>
+      <article class="service-card reveal"><div class="service-image"><img loading="lazy" src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=700&q=80" alt="Healthcare professional in a clinical setting"><span class="service-tag">HEALTH SUPPORT</span></div><div class="service-body"><h3>Nurse</h3><p>Ask us about nursing support suited to your family’s specific needs.</p><a class="service-link" href="#contact" data-service="Nurse">Enquire about service <span>→</span></a></div></article>
+      <article class="service-card reveal"><div class="service-image"><img loading="lazy" src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80" alt="Cook preparing food in a home kitchen"><span class="service-tag">MEALS & KITCHEN</span></div><div class="service-body"><h3>Cook</h3><p>Kitchen assistance and meal preparation to make busy days simpler.</p><a class="service-link" href="#contact" data-service="Cook">Enquire about service <span>→</span></a></div></article>
+      <article class="service-card reveal"><div class="service-image"><img loading="lazy" src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=700&q=80" alt="Car interior ready for a journey"><span class="service-tag">TRAVEL SUPPORT</span></div><div class="service-body"><h3>Driver</h3><p>Ask about driver availability for your household or travel requirements.</p><a class="service-link" href="#contact" data-service="Driver">Enquire about service <span>→</span></a></div></article>
+      <article class="service-card reveal"><div class="service-image"><img loading="lazy" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=700&q=80" alt="Clean and welcoming hotel interior"><span class="service-tag">BUSINESS STAFFING</span></div><div class="service-body"><h3>Hotel Staff & Housekeeping</h3><p>Staffing enquiries for hospitality, cleaning and property support needs.</p><a class="service-link" href="#contact" data-service="Hotel Staff & Housekeeping">Enquire about service <span>→</span></a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section why" id="about">
+  <div class="container why-grid">
+    <div class="why-image reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=85" alt="Professional home support service"><div class="why-badge"><strong>Trusted People, Better Care, Happy Homes.</strong><span>Our promise is to help you find support that fits your needs.</span></div></div>
+    <div class="why-content reveal"><div class="kicker">Why D.K. Home Solutions</div><h2>A little help can make a big difference.</h2><p>Finding the right person to support your home or loved one matters. Tell us what you need, and our team can discuss the service, availability and next steps with you.</p>
+      <div class="feature-list">
+        <div class="feature"><div class="feature-icon">🤝</div><div><h3>Personalised Assistance</h3><p>Discuss your needs before choosing a service.</p></div></div>
+        <div class="feature"><div class="feature-icon">🏠</div><div><h3>Multiple Services</h3><p>Home, family care and staffing options in one place.</p></div></div>
+        <div class="feature"><div class="feature-icon">💬</div><div><h3>Easy Communication</h3><p>Call or message us to ask your questions.</p></div></div>
+        <div class="feature"><div class="feature-icon">📍</div><div><h3>Delhi-Based Office</h3><p>Contact our Uttam Nagar office for enquiries.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="container"><div class="section-head reveal"><div class="kicker">Simple & straightforward</div><h2>Getting started is easy</h2><p>Three simple steps to discuss your requirement with D.K. Home Solutions.</p></div>
+    <div class="process-grid">
+      <div class="process-card reveal"><div class="process-number">01</div><h3>Tell us what you need</h3><p>Choose a service and share a few details about your home, family or staffing requirement.</p></div>
+      <div class="process-card reveal"><div class="process-number">02</div><h3>Talk with our team</h3><p>Call or message us to discuss availability, schedule, expectations and service details.</p></div>
+      <div class="process-card reveal"><div class="process-number">03</div><h3>Confirm the details</h3><p>Review the agreed arrangements and next steps before proceeding with a service.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta"><div class="container"><div class="cta-panel reveal"><div><h2>Looking for the right support for your family?</h2><p>Let’s talk about what you need. We’re happy to answer your questions.</p></div><a class="btn" href="https://wa.me/919315143991?text=Hello%20D.K.%20Home%20Solutions%2C%20I%20would%20like%20to%20enquire%20about%20your%20services.">Chat on WhatsApp <span>↗</span></a></div></div></section>
+
+<section class="section" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info reveal"><div class="kicker">Get in touch</div><h2>Let’s find the help you need.</h2><p>Contact us for service details, availability and enquiries. We’ll help you understand the next steps.</p>
+      <div class="contact-item"><div class="feature-icon">📞</div><div><strong>Call us</strong><a href="tel:9315143991">93151 43991</a><br><a href="tel:8882650342">88826 50342</a></div></div>
+      <div class="contact-item"><div class="feature-icon">📍</div><div><strong>Our office</strong><span>Office No. B-41, 1st Floor, Gali No. 3,<br>Rama Park, Uttam Nagar, New Delhi – 110059</span></div></div>
+      <div class="contact-item"><div class="feature-icon">🧾</div><div><strong>Registration number</strong><span>2020033723</span></div></div>
+      <div class="contact-item"><div class="feature-icon">👤</div><div><strong>Owner</strong><span>Deepak Kamat</span></div></div>
+    </div>
+    <form class="contact-form reveal" id="enquiryForm"><h3>Send an enquiry</h3><p>Fill in your details. The form will prepare a WhatsApp message for you.</p>
+      <div class="form-grid">
+        <div class="field"><label for="name">Your name *</label><input id="name" name="name" required placeholder="Enter your name"></div>
+        <div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" required inputmode="tel" placeholder="Your contact number"></div>
+        <div class="field full"><label for="service">Service required *</label><select id="service" name="service" required><option value="">Select a service</option><option>House Maid</option><option>Baby Care</option><option>Japa Maid & Newborn / Mother Care</option><option>Patient Care</option><option>Nurse</option><option>Cook</option><option>Driver</option><option>Housekeeping</option><option>Hotel Staff</option><option>Other enquiry</option></select></div>
+        <div class="field full"><label for="message">Your requirement</label><textarea id="message" name="message" placeholder="Tell us briefly what kind of help you need"></textarea></div>
+      </div>
+      <button class="btn btn-primary" type="submit">Continue on WhatsApp <span>↗</span></button><p class="form-note">Your message opens in WhatsApp. It is not stored on this website.</p>
+    </form>
+  </div>
+</section>
+</main>
+<footer><div class="container"><div class="footer-top">
+  <div class="footer-brand"><a class="brand" href="#home"><div class="brand-mark">D.K.</div><div class="brand-name">D.K. HOME SOLUTIONS <small>REGD. NO. 2020033723</small></div></a><p>Trusted People, Better Care, Happy Homes. Home care and staffing service enquiries in New Delhi.</p></div>
+  <div class="footer-links"><h4>Explore</h4><a href="#home">Home</a><a href="#services">Our Services</a><a href="#about">Why Choose Us</a><a href="#contact">Contact</a></div>
+  <div class="footer-links"><h4>Popular Services</h4><a href="#services">Baby Care</a><a href="#services">Japa Maid & Mother Care</a><a href="#services">Patient Care</a><a href="#services">House Maid & Cook</a></div>
+  <div class="footer-links"><h4>Contact</h4><a href="tel:9315143991">93151 43991</a><a href="tel:8882650342">88826 50342</a><a href="https://wa.me/919315143991">WhatsApp us ↗</a></div>
+</div><div class="footer-bottom"><span>© <span id="year"></span> D.K. Home Solutions (Regd.). All rights reserved.</span><span>Trusted People, Better Care, Happy Homes.</span></div></div></footer>
+<a class="whatsapp" href="https://wa.me/919315143991?text=Hello%20D.K.%20Home%20Solutions%2C%20I%20need%20information%20about%20your%20services." target="_blank" rel="noopener" aria-label="Chat with D.K. Home Solutions on WhatsApp">✆</a>
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'✕':'☰';});
+navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
+document.querySelectorAll('[data-service]').forEach(link=>link.addEventListener('click',()=>{document.getElementById('service').value=link.dataset.service;}));
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('enquiryForm').addEventListener('submit',event=>{
+  event.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const service=document.getElementById('service').value;
+  const message=document.getElementById('message').value.trim();
+  const text=`Hello D.K. Home Solutions, I would like to make an enquiry.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(service)}%0ARequirement: ${encodeURIComponent(message||'Not specified')}`;
+  window.open('https://wa.me/919315143991?text='+text,'_blank','noopener');
+});
+</script>
+</body>
+</html>
